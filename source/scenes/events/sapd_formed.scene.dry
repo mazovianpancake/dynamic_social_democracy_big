@@ -29,6 +29,7 @@ Q.old_catholics_sapd_display = 0
 // update all records
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
+Q.sapd_relation = 45;
 for (var record of Q.election_records) {
     record['sapd'] = 0;
 }
