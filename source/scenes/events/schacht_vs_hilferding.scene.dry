@@ -16,10 +16,19 @@ Of course, this criticism is unfounded, but the bourgeois establishment does not
 - @hilferding_resign: Hilferding must resign.
 
 @expose_him
-on-arrival: schacht_exposed = 1
 view-if: investigate_far_right >= 1
+go-to: expose_him_success if pro_republic >= 60; expose_him_failure if pro_republic < 60
+
+@expose_him_success
+on-arrival: schacht_exposed = 1
 
 We expose to the public Schacht's dealings with the <span style="color: #7A3C00;">Nazis</span>. For better or worse, he is cowed, and refrains from taking further actions against us.
+
+@expose_him_failure
+
+Despite proof of his <span style="color: #7A3C00;">true</span> allegiances, Hjalmar Schacht still is pushing for us to give up the finance ministry. We cannot do anything other than resign at this point.
+
+- @hilferding_resign: Hilferding must resign.
 
 
 @work_with
