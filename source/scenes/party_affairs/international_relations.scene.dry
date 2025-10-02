@@ -11,6 +11,7 @@ max-visits: 4
 At the <span style="color: #D50032;">Labor and Socialist International</span>, we can forge contacts with our fraternal <span style="color: #c00000;">socialist</span> parties in <span style="color: #001489;">Europe</span> and across the world.
 
 - @fr_uk: Build relationships with the <span style="color: #002654;">French</span> <span style="color: #ff0000;">SFIO</span> and <span style="color: #C8102E;">British</span> <span style="color: #f0456a;">Labour Party</span> to move their governments in Germany's favor.
+- @poland: Let's contact the <span style="color: #DC143C;">Polish soc</span><span style="color: #FFFFFF;">ialist party</span>, the democratic opposition against the <span style="color: #808080;">reactionary</span> dictatorship.
 - @austria: Learn organization and street fighting from the <span style="color: #EF3340;">Au</span><span style="color: #ffffff;"><span style="color: #ffffff;">str</span></span><span style="color: #EF3340;">ian</span> <span style="color: #A50034;">SDAPÖ</span>.
 - @scandi: Learn the path of economics and reform from the Scandinavian <span style="color: #D70926;">social democrats</span>.
 - @comintern: Forget the second international - embed a spy in the <span style="color: #D50000;">Comintern</span>'s conference.
@@ -26,6 +27,14 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; west_relation += 1; reformist_strength += 3; pacifism += 1; moderate_plan_support += 1; international_socialist_support += 1
 
 The <span style="color: #f0456a;">socialists</span> of <span style="color: #002654;">France</span> and <span style="color: #C8102E;">Britain</span> can influence their governments to be friendlier towards Germany. Hopefully they will reduce our reparations burden.
+
+@poland
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; east_relation += 1; reformist_dissent -= 3; pacifism += 1
+
+We send some funds to the <span style="color: #DC143C;">PPS</span>, allowing us to have a higher leverage in negotiations between our countries.
 
 @austria
 subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
