@@ -127,6 +127,7 @@ Q.ddp_relation = 60;
 Q.dvp_relation = 35;
 // DNVP and NSDAP are invariably hostile
 Q.dnvp_relation = 5;
+Q.sapd_relation = 0;
 Q.nsdap_relation = 0;
 Q.lvp_relation = 0;
 
