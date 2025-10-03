@@ -1,0 +1,40 @@
+on-arrival: {!
+// set up the infrastructure
+Q.nspd_formed = 1;
+Q.parties.push('nspd');
+Q.parties_graph.push('nspd');
+
+Q.workers_nspd = 5;
+Q.workers_spd -= 3;
+Q.new_middle_nspd = 10;
+Q.new_middle_spd -= 6;
+Q.old_middle_nspd = 1;
+Q.rural_nspd = 2;
+Q.unemployed_nspd = 1;
+Q.catholics_nspd = 5;
+Q.catholics_spd -= 4;
+
+Q.workers_other -= 5;
+
+if (Q.unions_independent) {
+    Q.workers_nspd += 8;
+    Q.unemployed_nspd += 4;
+}
+
+Q.old_workers_nspd_display = 0
+Q.old_new_middle_nspd_display = 0
+Q.old_old_middle_nspd_display = 0
+Q.old_rural_nspd_display = 0
+Q.old_unemployed_nspd_display = 0
+Q.old_catholics_nspd_display = 0
+
+// update all records
+Q.nspd_r = 0;
+Q.old_nspd_r = 0;
+for (var record of Q.election_records) {
+    record['nspd'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['nspd'] = 0;
+}
+!}
